@@ -567,3 +567,39 @@ main p,main li{text-wrap:wrap}
   .cta{padding:88px 0 96px}
   .footer-main{padding-top:44px}
 }
+
+/* =====================================================================
+   C32（2026-11-14 mashuさんの確認を受けて）
+   ===================================================================== */
+/* ご予約の前に：01・02・03 のすぐ後ろ（同じ行）に見出し。PC・スマホとも */
+.deliv li{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:12px;align-items:baseline}
+.deliv li > p{grid-column:1 / -1}
+.deliv .no{font-size:15px;font-weight:700;color:var(--red);letter-spacing:.06em}
+.deliv h4{margin:0 0 10px}
+/* 島田さんのことば：引用の印の右に文章を置く（印は1行目の高さにそろえる）。PC・スマホとも */
+.quote{display:flex;align-items:flex-start;gap:clamp(14px,1.6vw,22px)}
+.quote .quote-mark{flex:none;margin:.45em 0 0;width:30px;height:23px}
+.quote .quote-body{display:block;min-width:0}
+/* 左の早割の帯：触ると広がって戻らない（スマホではマウスを乗せた状態が残る）のを直す。
+   広がる動きはマウスのある画面だけにする */
+@media (hover:none){ .side-band:hover{padding-left:9px} }
+@media (max-width:760px){
+  .side-band,.side-band:hover,.side-band:focus,.side-band:active{padding:8px 2px 3px}
+  .side-band{-webkit-tap-highlight-color:transparent;outline:none}
+  /* 島田さん（スマホ）：見出し → 写真 → すぐ下に名前（写真の説明として）→ ことば。
+     名前がページの下の Yamato の写真に近く見えないように */
+  .farm-text{display:contents}
+  .farm-grid{display:flex;flex-direction:column;gap:0}
+  .farm-text .title{order:1}
+  .farm-text .title-ja{order:2;align-self:flex-start;margin-bottom:22px}
+  .farm-photos{order:3}
+  .farm-grid .farm-text p.farm-name{order:4;margin:14px 0 0;font-size:13px}
+  .farm-text .quote{order:5;margin:26px 0 0}
+  .quote .quote-mark{width:24px;height:18px}
+  .member{margin-top:56px}
+}
+@media (max-width:760px){
+  .farm-grid .farm-text .title{align-self:flex-start;text-align:left;margin-left:0}
+  .farm-grid .farm-text p.farm-name{justify-content:flex-start;align-self:stretch;text-align:left;padding:0}
+}
+.deliv li{align-content:start}   /* 3つの高さがそろうとき、短い説明の上に隙間ができないように */
