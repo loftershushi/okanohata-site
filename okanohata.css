@@ -685,3 +685,7 @@ main p,main li{text-wrap:wrap}
   /* 左右のかたまりの中のすき間を、かたまりどうしのすき間と同じにする（4枚が同じ幅になる） */
   .veg-row .veg-group:first-child .items,.veg-row .veg-group:last-child .items{column-gap:clamp(20px,2.2vw,32px)}
 }
+@media (min-width:1101px){
+  /* お届けの時期は、名前の下の行の左に（右に寄ると浮いて見えるため。2026-11-15 mashuさん） */
+  .veg-row .veg-group:first-child .veg-when,.veg-row .veg-group:last-child .veg-when{margin-left:0;flex-basis:100%}
+}
