@@ -663,3 +663,10 @@ main p,main li{text-wrap:wrap}
   /* 4枚とも、価格は名前の下の行に（カードによって1行・2行が混ざらないように） */
   .veg-row .item-name{flex-direction:column;align-items:flex-start;row-gap:4px}
 }
+
+/* ===== C36（2026-11-15 Notion「販売は3品目」）：アスパラ 1kg＋トマト 4kg・5kg の3枚を、PC で同じ幅の1行に ===== */
+@media (min-width:1101px){
+  .veg-row{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .veg-row .veg-group:last-child{grid-column:span 2}
+  .veg-row .veg-group:last-child .items{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
