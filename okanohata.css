@@ -618,3 +618,48 @@ main p,main li{text-wrap:wrap}
   .member .say em + br{display:none}
   .member .say em{margin:6px 0 12px}
 }
+
+/* ===== C35（2026-11-15 mashuさん「アスパラは 1kg のみ。商品は4つ。PC は1行でいいかも」） =====
+   PC（1101px 以上）：アスパラ1枚＋トマト3枚を同じ幅で1行に並べる。
+   箱（veg-row）を4列にし、アスパラは1列・トマトは3列ぶん。見出しの高さは subgrid で左右そろえ、カードの上端もそろう */
+@media (min-width:1101px){
+  .veg-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto auto;column-gap:clamp(20px,2.2vw,32px)}
+  .veg-row .veg-group{display:grid;grid-template-rows:subgrid;grid-row:span 2;margin-top:0}
+  .veg-row .veg-group + .veg-group{margin-top:0}
+  .veg-row .veg-group:first-child{grid-column:span 1}
+  .veg-row .veg-group:last-child{grid-column:span 3}
+  .veg-row .veg-group:first-child .items{grid-template-columns:minmax(0,1fr)}
+  .veg-row .veg-group:last-child .items{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:clamp(20px,2.2vw,32px)}
+  .veg-row .veg-head{align-content:start}
+  /* 狭い列の見出し：お届けの時期は名前の下の行へ */
+  .veg-row .veg-group:first-child .veg-when{margin-left:0;flex-basis:100%}
+}
+/* タブレット（761〜1100px）：アスパラ1枚が半分の幅で残るので、トマトと同じ2列のまま（今まで通り） */
+@media (min-width:1101px){
+  /* 4枚の「予約する」ボタンを、カードの下端でそろえる（説明の行数がちがっても） */
+  .veg-row .item-body{flex:1}
+  .veg-row .item-go{margin-top:auto}
+  .veg-row .item-copy{margin-bottom:14px}
+  /* 名前（アスパラ 1kg）は折り返さない */
+  .veg-row .item-name > span:first-child{white-space:nowrap}
+  /* 狭い列のアスパラの見出し：丸と名前を同じ行に、名前は1行に収める */
+  .veg-row .veg-group:first-child .veg-head h3{letter-spacing:.06em;white-space:nowrap}
+  .veg-row .veg-group:first-child .veg-head .dot{align-self:center}
+}
+@media (min-width:1101px){
+  /* 幅が狭めの PC（1101〜1300px）でもアスパラの名前が列に収まり、4枚が同じ幅になるように、字の大きさを画面に合わせる */
+  .veg-row .veg-group:first-child .veg-head h3{font-size:clamp(16px,1.55vw,23px)}
+}
+/* C35 の続き：言葉のまとまりで折り返すのは PC の4枚並びのときだけ（スマホ・タブレットでは普通に流す） */
+.nw-pc{display:inline}
+@media (min-width:1101px){
+  .nw-pc{display:inline-block}
+  /* 狭い列の説明は左そろえ（まとまりで折り返すと、両端そろえで字の間が開くため） */
+  .veg-row .veg-group:first-child .veg-head p{text-align:left}
+  /* カードが細いとき（1101〜1300px）は、価格を名前の下の行へ回す（はみ出さないように） */
+  .veg-row .item-name{flex-wrap:wrap;row-gap:2px}
+}
+@media (min-width:1101px){
+  /* 4枚とも、価格は名前の下の行に（カードによって1行・2行が混ざらないように） */
+  .veg-row .item-name{flex-direction:column;align-items:flex-start;row-gap:4px}
+}
