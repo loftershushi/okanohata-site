@@ -689,3 +689,16 @@ main p,main li{text-wrap:wrap}
   /* お届けの時期は、名前の下の行の左に（右に寄ると浮いて見えるため。2026-11-15 mashuさん） */
   .veg-row .veg-group:first-child .veg-when,.veg-row .veg-group:last-child .veg-when{margin-left:0;flex-basis:100%}
 }
+
+/* ===== C39（2026-11-15 mashuさん「スマホの予約するボタンは値段の下に。左の説明の改行に配慮して」） =====
+   スマホ（760px 以下）の商品カード：左＝名前・説明、右＝値段・予約するボタン の2列に。
+   説明は左の細い列で、言葉のまとまり（nw-pc）でだけ折り返し、左そろえ（両端そろえで字の間が開かないように） */
+@media (max-width:760px){
+  .veg-row .item-body{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:14px;row-gap:8px;align-items:start}
+  .veg-row .item-name{display:contents}
+  .veg-row .item-name > span:first-child{grid-column:1;grid-row:1;align-self:center;white-space:nowrap}
+  .veg-row .item-name .price{grid-column:2;grid-row:1;justify-self:end;align-self:center;white-space:nowrap}
+  .veg-row .item-copy{grid-column:1;grid-row:2;text-align:left;align-self:center;margin:0}
+  .veg-row .item-go{grid-column:2;grid-row:2;justify-self:end;align-self:center;margin-top:0}
+  .veg-row .item-copy .nw-pc{display:inline-block}   /* 見出しの説明は対象外（両端そろえで字の間が開くため） */
+}
