@@ -670,3 +670,18 @@ main p,main li{text-wrap:wrap}
   .veg-row .veg-group:last-child{grid-column:span 2}
   .veg-row .veg-group:last-child .items{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+/* ===== C37（2026-11-15 mashuさん「4品目に。1行で、ちょうど左右半々」）：左半分＝アスパラ 500g・1kg、右半分＝トマト 4kg・5kg ===== */
+@media (min-width:1101px){
+  .veg-row{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .veg-row .veg-group:first-child,.veg-row .veg-group:last-child{grid-column:span 2}
+  .veg-row .veg-group:first-child .items,.veg-row .veg-group:last-child .items{grid-template-columns:repeat(2,minmax(0,1fr))}
+  /* アスパラの列も半分の幅になったので、見出しの字の大きさ・説明のそろえ方はトマトと同じに戻す */
+  .veg-row .veg-group:first-child .veg-head h3{font-size:clamp(19px,2vw,23px);letter-spacing:.12em}
+  .veg-row .veg-group:first-child .veg-head p{text-align:left}
+  .veg-row .veg-group:first-child .veg-when{margin-left:auto;flex-basis:auto}
+}
+@media (min-width:1101px){
+  /* 左右のかたまりの中のすき間を、かたまりどうしのすき間と同じにする（4枚が同じ幅になる） */
+  .veg-row .veg-group:first-child .items,.veg-row .veg-group:last-child .items{column-gap:clamp(20px,2.2vw,32px)}
+}
