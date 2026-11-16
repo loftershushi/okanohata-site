@@ -702,3 +702,7 @@ main p,main li{text-wrap:wrap}
   .veg-row .item-go{grid-column:2;grid-row:2;justify-self:end;align-self:center;margin-top:0}
   .veg-row .item-copy .nw-pc{display:inline-block}   /* 見出しの説明は対象外（両端そろえで字の間が開くため） */
 }
+
+/* C40（2026-11-16）：トマトのお届けが 2027年6〜7月になったので、こよみは11月〜7月の9か月 */
+.koyomi-grid{grid-template-columns:110px repeat(9,minmax(0,1fr))}
+@media (max-width:760px){ .koyomi-grid{grid-template-columns:78px repeat(9,minmax(0,1fr))} }
