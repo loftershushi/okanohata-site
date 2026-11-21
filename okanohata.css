@@ -706,3 +706,7 @@ main p,main li{text-wrap:wrap}
 /* C40（2026-11-16）：トマトのお届けが 2027年6〜7月になったので、こよみは11月〜7月の9か月 */
 .koyomi-grid{grid-template-columns:110px repeat(9,minmax(0,1fr))}
 @media (max-width:760px){ .koyomi-grid{grid-template-columns:78px repeat(9,minmax(0,1fr))} }
+
+/* C41（2026-11-21）：商品カードの目安の本数・個数。短い説明の上に1行。（目安）は小さく */
+.item-count{display:block;font-weight:700;color:var(--ink);font-size:13.5px;letter-spacing:.04em;white-space:nowrap}
+.item-count small{font-weight:400;font-size:11px;color:var(--sub);margin-left:2px}
