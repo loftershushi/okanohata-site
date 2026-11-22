@@ -710,3 +710,7 @@ main p,main li{text-wrap:wrap}
 /* C41（2026-11-21）：商品カードの目安の本数・個数。短い説明の上に1行。（目安）は小さく */
 .item-count{display:block;font-weight:700;color:var(--ink);font-size:13.5px;letter-spacing:.04em;white-space:nowrap}
 .item-count small{font-weight:400;font-size:11px;color:var(--sub);margin-left:2px}
+
+/* C43（2026-11-22 mashuさん「フッターのロゴが（白い札の）真ん中じゃない」）：PC では札が列の幅いっぱいに伸び、ロゴが左に寄っていた。
+   札の幅をロゴに合わせ（fit-content）、ロゴを札の真ん中に置く。スマホも同じ指定で変わらない */
+.footer-home .brand{width:fit-content;justify-content:center}
