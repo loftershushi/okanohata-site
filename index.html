@@ -292,9 +292,9 @@
 <div class="awning" aria-hidden="true"></div>
 <section class="hero hero--shop" id="top" aria-label="おかのはた">
   <div class="photo">
-    <div class="slide is-active"><img src="img/hero-3.webp" alt="秋の草の上にのせた3つのトマト" fetchpriority="high"></div>
-    <div class="slide"><img src="img/hero-2.webp" alt="木のテーブルに、かぼちゃと丸く並べたトマト" loading="lazy"></div>
-    <div class="slide"><img src="img/hero-1.webp" alt="色も大きさもふぞろいな、山盛りの美瑛のトマト" loading="lazy"></div>
+    <div class="slide is-active"><img srcset="img/hero-3-800w.webp 800w, img/hero-3-1600w.webp 1600w, img/hero-3.webp 2400w" sizes="(max-aspect-ratio: 3/2) 150vh, 100vw" src="img/hero-3.webp" alt="秋の草の上にのせた3つのトマト" fetchpriority="high"></div>
+    <div class="slide"><img srcset="img/hero-2-800w.webp 800w, img/hero-2-1600w.webp 1600w, img/hero-2.webp 2400w" sizes="(max-aspect-ratio: 3/2) 150vh, 100vw" src="img/hero-2.webp" alt="木のテーブルに、かぼちゃと丸く並べたトマト" loading="lazy"></div>
+    <div class="slide"><img srcset="img/hero-1-800w.webp 800w, img/hero-1-1600w.webp 1600w, img/hero-1.webp 2400w" sizes="(max-aspect-ratio: 3/2) 150vh, 100vw" src="img/hero-1.webp" alt="色も大きさもふぞろいな、山盛りの美瑛のトマト" loading="lazy"></div>
     <div class="hero-dots" aria-label="写真の切り替え"></div>
   </div>
   <div class="stall">
@@ -366,7 +366,7 @@
   <div class="bleed" id="story">
     <!-- 写真の上端の曲線（曲線より上を Reserve と同じ生成りで塗り、赤土の線を引く。2026-11-08 写真の上のすき間をなくした） -->
     <div class="hill hill--top" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 0 L1440 0 L1440 40 C 980 0, 380 8, 0 54 Z" style="fill:var(--cream)"/><g class="ln-wrap"><path class="ln" d="M0 54 C 380 8, 980 0, 1440 40"/></g></svg></div>
-    <div class="bleed-photo" aria-hidden="true"><img src="img/story-bg.webp" alt="" loading="lazy"></div>
+    <div class="bleed-photo" aria-hidden="true"><img srcset="img/story-bg-800w.webp 800w, img/story-bg-1600w.webp 1600w, img/story-bg.webp 2400w" sizes="(max-aspect-ratio: 3/2) 150vh, 100vw" src="img/story-bg.webp" alt="" loading="lazy"></div>
     <div class="wrap">
       <div class="bleed-text reveal">
         <h2 class="title">STORY</h2>
@@ -420,7 +420,7 @@
       </div>
       <div class="items">
         <a class="item reveal" href="https://okanohata.base.shop/items/166038685">
-          <div class="ph zoom unveil"><span class="early-tag">早割<b>−300円</b></span><img src="img/asparagus-500g.webp" alt="ざるにのせたアスパラ" loading="lazy" width="1200" height="800"><span class="ph-note">写真はイメージです</span></div>
+          <div class="ph zoom unveil"><span class="early-tag">早割<b>−300円</b></span><img srcset="img/asparagus-500g-800w.webp 800w, img/asparagus-500g.webp 1200w" sizes="100vw" src="img/asparagus-500g.webp" alt="ざるにのせたアスパラ" loading="lazy" width="1200" height="800"><span class="ph-note">写真はイメージです</span></div>
           <div class="item-body">
             <span class="item-name"><span>アスパラ <span class="kg">500g</span></span><span class="price"><s class="price-was">2,299<small>円</small></s><span class="price-early">1,999<small>円</small></span></span></span>
             <span class="item-copy"><span class="item-count">約20〜25本<small>（目安）</small></span>まずはお試しに。</span>
@@ -449,7 +449,7 @@
       <div class="items">
         <!-- 商品のリンクは BASE の商品ページ（2026-11-15 つないだ。_make_b_full.py の C34） -->
         <a class="item reveal" href="https://okanohata.base.shop/items/166029579">
-          <div class="ph zoom unveil"><span class="early-tag">早割<b>−300円</b></span><img src="img/tomato-4kg.webp" alt="両手にのせた、美瑛のトマト" loading="lazy" width="1200" height="800"><span class="ph-note">写真はイメージです</span></div>
+          <div class="ph zoom unveil"><span class="early-tag">早割<b>−300円</b></span><img srcset="img/tomato-4kg-800w.webp 800w, img/tomato-4kg-1600w.webp 1600w, img/tomato-4kg.webp 2400w" sizes="100vw" src="img/tomato-4kg.webp" alt="両手にのせた、美瑛のトマト" loading="lazy" width="1200" height="800"><span class="ph-note">写真はイメージです</span></div>
           <div class="item-body">
             <span class="item-name"><span>トマト <span class="kg">4kg</span></span><span class="price"><s class="price-was">3,299<small>円</small></s><span class="price-early">2,999<small>円</small></span></span></span>
             <span class="item-copy"><span class="item-count">約20〜25個<small>（目安）</small></span>まずはご家庭で。<span class="nw-pc">サラダに、そのままに。</span></span>
@@ -457,7 +457,7 @@
           </div>
         </a>
         <a class="item reveal" href="https://okanohata.base.shop/items/166029676" style="transition-delay:.12s">
-          <div class="ph zoom unveil" style="--d:.12s"><span class="early-tag">早割<b>−300円</b></span><img src="img/tomato-6kg.webp" alt="山のように重なった、割れのあるトマト" loading="lazy" width="1200" height="800"><span class="ph-note">写真はイメージです</span></div>
+          <div class="ph zoom unveil" style="--d:.12s"><span class="early-tag">早割<b>−300円</b></span><img srcset="img/tomato-6kg-800w.webp 800w, img/tomato-6kg.webp 1200w" sizes="100vw" src="img/tomato-6kg.webp" alt="山のように重なった、割れのあるトマト" loading="lazy" width="1200" height="800"><span class="ph-note">写真はイメージです</span></div>
           <div class="item-body">
             <span class="item-name"><span>トマト <span class="kg">5kg</span></span><span class="price"><s class="price-was">3,599<small>円</small></s><span class="price-early">3,299<small>円</small></span></span></span>
             <span class="item-copy"><span class="item-count">約25〜30個<small>（目安）</small></span>煮込みにも、<span class="nw-pc">ソースにも。</span></span>
@@ -512,8 +512,8 @@
   <div class="wrap">
     <div class="farm-grid">
       <div class="farm-photos">
-        <div class="big unveil"><img src="img/farmer-1.webp" alt="トマトのハウスを歩く農家の島田さん" loading="lazy" width="1800" height="1200"></div>
-        <div class="small unveil" style="--d:.3s"><img src="img/farmer-2.webp" alt="トマトの手入れをする島田さん" loading="lazy" width="1200" height="800"></div>
+        <div class="big unveil"><img srcset="img/farmer-1-800w.webp 800w, img/farmer-1.webp 1800w" sizes="100vw" src="img/farmer-1.webp" alt="トマトのハウスを歩く農家の島田さん" loading="lazy" width="1800" height="1200"></div>
+        <div class="small unveil" style="--d:.3s"><img srcset="img/farmer-2-800w.webp 800w, img/farmer-2.webp 1200w" sizes="100vw" src="img/farmer-2.webp" alt="トマトの手入れをする島田さん" loading="lazy" width="1200" height="800"></div>
       </div>
       <div class="farm-text reveal">
         <h2 class="title">FARMERS</h2>
@@ -524,7 +524,7 @@
     </div>
     <!-- 畑に立つ UBAKU のメンバー（紹介文は ubaku.jp の Team と同じ） -->
     <div class="member reveal">
-      <div class="ph unveil"><img src="img/yamato.webp" alt="トマトのハウスに立つ UBAKU の Yamato" loading="lazy" width="1200" height="800"></div>
+      <div class="ph unveil"><img srcset="img/yamato-800w.webp 800w, img/yamato.webp 1200w" sizes="100vw" src="img/yamato.webp" alt="トマトのハウスに立つ UBAKU の Yamato" loading="lazy" width="1200" height="800"></div>
       <div>
         <span class="member-role">Field Director｜耕す人</span>
         <h3>Yamato<small style="font-size:12px;letter-spacing:.14em;margin-left:12px;color:var(--on-green-sub)">UBAKU</small></h3>
@@ -539,20 +539,20 @@
     <ul class="flow-track">
       <!-- 並び（2026-11-08 C18）：はみだし野菜らしい写真を足して14枚（story-1〜4・field-9＝追加.jpg・field-10＝追加2.jpg。mashuさん）。
            商品と同じ写真（field-3・field-8）は使わない。かぼちゃ（4・pumpkin-1・pumpkin-2・7）は隣り合わない、枝の写真（story-2・3・4・field-2・10）も続けない、木のベンチ（4・6・7）は離す -->
-      <li><img src="img/field-4.webp" alt="木のテーブルにのせたかぼちゃとトマト" loading="lazy" width="1200" height="800"></li>
-      <li><img src="img/story-1.webp" alt="色も形もそろわない、山盛りのトマト" loading="lazy" width="1600" height="1067"></li>
-      <li><img src="img/story-2.webp" alt="枝についたままの青いトマトを手袋で支える" loading="lazy" width="1600" height="1067"></li>
-      <li><img src="img/field-pumpkin-1.webp" alt="農家さんが手にのせた緑のかぼちゃ" loading="lazy" width="1200" height="800"></li>
-      <li><img src="img/field-6.webp" alt="木のテーブルに丸く並べたトマト" loading="lazy" width="1200" height="800"></li>
-      <li><img src="img/story-3.webp" alt="枝の小さなトマトに手をのばす" loading="lazy" width="1600" height="1067"></li>
-      <li><img src="img/field-pumpkin-2.webp" alt="丘の牧草地で、台の上に重ねたかぼちゃ" loading="lazy" width="1200" height="800"></li>
-      <li><img src="img/field-1.webp" alt="両手にのせた黄色いトマト" loading="lazy" width="1200" height="800"></li>
-      <li><img src="img/field-2.webp" alt="枝のトマトに手をのばす" loading="lazy" width="1200" height="800"></li>
-      <li><img src="img/field-7.webp" alt="丘を背に、木の台にのせたかぼちゃとトマト" loading="lazy" width="1200" height="800"></li>
-      <li><img src="img/field-5.webp" alt="草の上のトマト" loading="lazy" width="1200" height="800"></li>
-      <li><img src="img/story-4.webp" alt="枝に一つだけ実った、形のふぞろいなトマト" loading="lazy" width="1600" height="1067"></li>
-      <li><img src="img/field-9.webp" alt="台の上の、ひびの入ったトマト" loading="lazy" width="1200" height="800"></li>
-      <li><img src="img/field-10.webp" alt="枝で育つ、まだ青いトマト" loading="lazy" width="1200" height="800"></li>
+      <li><img srcset="img/field-4-800w.webp 800w, img/field-4.webp 1200w" sizes="100vw" src="img/field-4.webp" alt="木のテーブルにのせたかぼちゃとトマト" loading="lazy" width="1200" height="800"></li>
+      <li><img srcset="img/story-1-800w.webp 800w, img/story-1.webp 1600w" sizes="100vw" src="img/story-1.webp" alt="色も形もそろわない、山盛りのトマト" loading="lazy" width="1600" height="1067"></li>
+      <li><img srcset="img/story-2-800w.webp 800w, img/story-2.webp 1600w" sizes="100vw" src="img/story-2.webp" alt="枝についたままの青いトマトを手袋で支える" loading="lazy" width="1600" height="1067"></li>
+      <li><img srcset="img/field-pumpkin-1-800w.webp 800w, img/field-pumpkin-1.webp 1200w" sizes="100vw" src="img/field-pumpkin-1.webp" alt="農家さんが手にのせた緑のかぼちゃ" loading="lazy" width="1200" height="800"></li>
+      <li><img srcset="img/field-6-800w.webp 800w, img/field-6.webp 1200w" sizes="100vw" src="img/field-6.webp" alt="木のテーブルに丸く並べたトマト" loading="lazy" width="1200" height="800"></li>
+      <li><img srcset="img/story-3-800w.webp 800w, img/story-3.webp 1600w" sizes="100vw" src="img/story-3.webp" alt="枝の小さなトマトに手をのばす" loading="lazy" width="1600" height="1067"></li>
+      <li><img srcset="img/field-pumpkin-2-800w.webp 800w, img/field-pumpkin-2.webp 1200w" sizes="100vw" src="img/field-pumpkin-2.webp" alt="丘の牧草地で、台の上に重ねたかぼちゃ" loading="lazy" width="1200" height="800"></li>
+      <li><img srcset="img/field-1-800w.webp 800w, img/field-1.webp 1200w" sizes="100vw" src="img/field-1.webp" alt="両手にのせた黄色いトマト" loading="lazy" width="1200" height="800"></li>
+      <li><img srcset="img/field-2-800w.webp 800w, img/field-2.webp 1200w" sizes="100vw" src="img/field-2.webp" alt="枝のトマトに手をのばす" loading="lazy" width="1200" height="800"></li>
+      <li><img srcset="img/field-7-800w.webp 800w, img/field-7.webp 1200w" sizes="100vw" src="img/field-7.webp" alt="丘を背に、木の台にのせたかぼちゃとトマト" loading="lazy" width="1200" height="800"></li>
+      <li><img srcset="img/field-5-800w.webp 800w, img/field-5.webp 1200w" sizes="100vw" src="img/field-5.webp" alt="草の上のトマト" loading="lazy" width="1200" height="800"></li>
+      <li><img srcset="img/story-4-800w.webp 800w, img/story-4.webp 1600w" sizes="100vw" src="img/story-4.webp" alt="枝に一つだけ実った、形のふぞろいなトマト" loading="lazy" width="1600" height="1067"></li>
+      <li><img srcset="img/field-9-800w.webp 800w, img/field-9.webp 1200w" sizes="100vw" src="img/field-9.webp" alt="台の上の、ひびの入ったトマト" loading="lazy" width="1200" height="800"></li>
+      <li><img srcset="img/field-10-800w.webp 800w, img/field-10.webp 1200w" sizes="100vw" src="img/field-10.webp" alt="枝で育つ、まだ青いトマト" loading="lazy" width="1200" height="800"></li>
     </ul>
   </div>
   <p class="flow-cap">2026年10月、美瑛の畑で</p>
@@ -560,7 +560,7 @@
 
 <!-- ⑥ Wholesale：卸のご相談（mashuさん「お店の卸も強調したい」）。写真に重ねた大きな帯 -->
 <section class="ws" id="wholesale">
-  <div class="ws-photo unveil" aria-hidden="true"><img src="img/wholesale.webp" alt="" loading="lazy"></div>
+  <div class="ws-photo unveil" aria-hidden="true"><img srcset="img/wholesale-800w.webp 800w, img/wholesale-1600w.webp 1600w, img/wholesale.webp 2400w" sizes="(max-aspect-ratio: 3/2) 150vh, 100vw" src="img/wholesale.webp" alt="" loading="lazy"></div>
   <div class="wrap">
     <div class="reveal">
       <h2 class="title">WHOLESALE</h2>

@@ -16,6 +16,11 @@
      ・開くたびに毎回出す。押すと飛ばせる */
   function intro() {
     if (reduce || /[?&]nointro/.test(location.search)) return;
+    // 1回出したら、その端末では7日間出さない（2026-11-24 mashuさん。3サイト共通・UBAKU Letter の札と同じ。前は毎回）。?intro で必ず出す
+    var last = 0;
+    try { last = +localStorage.getItem('ubakuIntro') || 0; } catch (e) {}
+    if (!/[?&]intro/.test(location.search) && Date.now() - last < 7 * 864e5) return;
+    try { localStorage.setItem('ubakuIntro', Date.now()); } catch (e) {}
     html.classList.add('is-intro');
     var words = 'はみだしても、美瑛の味。';
     var op = document.createElement('div');
