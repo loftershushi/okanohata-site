@@ -325,8 +325,8 @@ body.at-end .fab{opacity:0;transform:translateY(14px);pointer-events:none}
 @media (max-width:760px){
   :root{--sec-y:46px}
   /* 行と行のあいだを少し詰める（本文は 2.0〜2.2 → 1.85） */
-  body{line-height:1.85}
-  main p:not(.catch):not(.quote):not(.cta-lead),.faq details p,.item-copy{line-height:1.85 !important}
+  body{line-height:1.9}   /* 2026-11-25 スマホ点検：共通ルールの 1.9 に（前は 1.85） */
+  main p:not(.catch):not(.quote):not(.cta-lead),.faq details p,.item-copy{line-height:1.9 !important}
   .catch{line-height:1.7}
   .intro{padding:40px 0 30px}
   /* 予約受付中・アスパラ・トマトを横に3つ並べて小さく */
@@ -714,3 +714,9 @@ main p,main li{text-wrap:wrap}
 /* C43（2026-11-22 mashuさん「フッターのロゴが（白い札の）真ん中じゃない」）：PC では札が列の幅いっぱいに伸び、ロゴが左に寄っていた。
    札の幅をロゴに合わせ（fit-content）、ロゴを札の真ん中に置く。スマホも同じ指定で変わらない */
 .footer-home .brand{width:fit-content;justify-content:center}
+
+/* 2026-11-25 スマホ点検：お届けの暦の小さい字を少し大きく（年 9.5px→10.5px・早割 9px→10px。iPhone で読めるように） */
+@media (max-width:760px){
+  .koyomi-grid .yr{font-size:10.5px}
+  .koyomi-bar--early em{font-size:10px}
+}
