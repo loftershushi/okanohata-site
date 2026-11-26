@@ -10,7 +10,7 @@
      元：おかのはた の見本（仮公開用 ubaku-site/yasai。本番は BASE の yasai.ubaku.jp なので、このページは本番公開しない）
      C8（2026-11-08）：ubakuvilla.com（11/7 公開）の作りを参考に全体を組み直した。
        ・イントロ「はみだしの円」→ 画面いっぱいの写真3枚 → 紹介 → Reserve（予約販売の流れ。2026-11-08 追加）→（曲線）→ Story → 全面の写真 → Vegetables（価格・季節のこよみ）
-         → Wholesale（卸を強調）→ Farmers（島田さん・朗根内地区）→ ご予約の前に・よくある質問 → 最後の帯 →（曲線）→ フッター（運営 UBAKU）
+         → Wholesale（卸を強調）→ Farmers（美瑛の農家さんのひとこと）→ ご予約の前に・よくある質問 → 最後の帯 →（曲線）→ フッター（運営 UBAKU）
        ・写真は mashuさんが選んだ img/使ってほしい写真 から make_site_images.py で作る
        ・見た目は assets/yasai.css、動きは assets/yasai.js
      C7 以前の経緯は 01_美瑛の野菜（旧Yasai）/03_自社サイト（BASE・yasai.ubaku.jp）/CLAUDE.md -->
@@ -512,14 +512,14 @@
   <div class="wrap">
     <div class="farm-grid">
       <div class="farm-photos">
-        <div class="big unveil"><img srcset="img/farmer-1-800w.webp 800w, img/farmer-1.webp 1800w" sizes="100vw" src="img/farmer-1.webp" alt="トマトのハウスを歩く農家の島田さん" loading="lazy" width="1800" height="1200"></div>
-        <div class="small unveil" style="--d:.3s"><img srcset="img/farmer-2-800w.webp 800w, img/farmer-2.webp 1200w" sizes="100vw" src="img/farmer-2.webp" alt="トマトの手入れをする島田さん" loading="lazy" width="1200" height="800"></div>
+        <div class="big unveil"><img srcset="img/story-4-800w.webp 800w, img/story-4.webp 1600w" sizes="100vw" src="img/story-4.webp" alt="枝に一つだけ実った、形のふぞろいなトマト" loading="lazy" width="1600" height="1067"></div>
+        <div class="small unveil" style="--d:.3s"><img srcset="img/farm-hand-800w.webp 800w, img/farm-hand.webp 1800w" sizes="100vw" src="img/farm-hand.webp" alt="枝の青いトマトに手をのばす" loading="lazy" width="1800" height="1200"></div>
       </div>
       <div class="farm-text reveal">
         <h2 class="title">FARMERS</h2>
         <span class="title-ja">畑からのひとこと</span>
         <p class="quote"><svg class="quote-mark" viewBox="0 0 40 30" aria-hidden="true"><path d="M2 30V18C2 9 7 3 15 1l1.5 3C12 6 9.5 9.5 9.5 14H16v16zM24 30V18c0-9 5-15 13-17l1.5 3C34 6 31.5 9.5 31.5 14H38v16z"/></svg><span class="quote-body"><span class="phrase">サイズが小さいとか、</span><span class="phrase">少し傷があるとかの理由で</span><span class="phrase">捨てられるのが悔しかった。</span><span class="phrase">同じくおいしいのに。</span></span></p>
-        <p class="farm-name"><b>島田さん</b>北海道美瑛町　朗根内地区</p>
+        <p class="farm-name"><b>美瑛の農家さん</b></p>
       </div>
     </div>
     <!-- 畑に立つ UBAKU のメンバー（紹介文は ubaku.jp の Team と同じ） -->
@@ -537,22 +537,18 @@
   <!-- 畑のようす：止まらずゆっくり流れる（マウスを乗せると止まる） -->
   <div class="flow reveal" data-flow>
     <ul class="flow-track">
-      <!-- 並び（2026-11-08 C18）：はみだし野菜らしい写真を足して14枚（story-1〜4・field-9＝追加.jpg・field-10＝追加2.jpg。mashuさん）。
-           商品と同じ写真（field-3・field-8）は使わない。かぼちゃ（4・pumpkin-1・pumpkin-2・7）は隣り合わない、枝の写真（story-2・3・4・field-2・10）も続けない、木のベンチ（4・6・7）は離す -->
+      <!-- 並び（2026-11-26）：使用禁止の3枚（黄色い服が写った写真）と、FARMERS へ移した写真を外して10枚。
+           商品と同じ写真（field-3・field-8）は使わない。かぼちゃ（4・pumpkin-2・7）は隣り合わない、枝の写真（story-3・field-10）は続けない、木のベンチ（4・6・7）は離す -->
       <li><img srcset="img/field-4-800w.webp 800w, img/field-4.webp 1200w" sizes="100vw" src="img/field-4.webp" alt="木のテーブルにのせたかぼちゃとトマト" loading="lazy" width="1200" height="800"></li>
       <li><img srcset="img/story-1-800w.webp 800w, img/story-1.webp 1600w" sizes="100vw" src="img/story-1.webp" alt="色も形もそろわない、山盛りのトマト" loading="lazy" width="1600" height="1067"></li>
-      <li><img srcset="img/story-2-800w.webp 800w, img/story-2.webp 1600w" sizes="100vw" src="img/story-2.webp" alt="枝についたままの青いトマトを手袋で支える" loading="lazy" width="1600" height="1067"></li>
-      <li><img srcset="img/field-pumpkin-1-800w.webp 800w, img/field-pumpkin-1.webp 1200w" sizes="100vw" src="img/field-pumpkin-1.webp" alt="農家さんが手にのせた緑のかぼちゃ" loading="lazy" width="1200" height="800"></li>
-      <li><img srcset="img/field-6-800w.webp 800w, img/field-6.webp 1200w" sizes="100vw" src="img/field-6.webp" alt="木のテーブルに丸く並べたトマト" loading="lazy" width="1200" height="800"></li>
       <li><img srcset="img/story-3-800w.webp 800w, img/story-3.webp 1600w" sizes="100vw" src="img/story-3.webp" alt="枝の小さなトマトに手をのばす" loading="lazy" width="1600" height="1067"></li>
+      <li><img srcset="img/field-6-800w.webp 800w, img/field-6.webp 1200w" sizes="100vw" src="img/field-6.webp" alt="木のテーブルに丸く並べたトマト" loading="lazy" width="1200" height="800"></li>
       <li><img srcset="img/field-pumpkin-2-800w.webp 800w, img/field-pumpkin-2.webp 1200w" sizes="100vw" src="img/field-pumpkin-2.webp" alt="丘の牧草地で、台の上に重ねたかぼちゃ" loading="lazy" width="1200" height="800"></li>
       <li><img srcset="img/field-1-800w.webp 800w, img/field-1.webp 1200w" sizes="100vw" src="img/field-1.webp" alt="両手にのせた黄色いトマト" loading="lazy" width="1200" height="800"></li>
-      <li><img srcset="img/field-2-800w.webp 800w, img/field-2.webp 1200w" sizes="100vw" src="img/field-2.webp" alt="枝のトマトに手をのばす" loading="lazy" width="1200" height="800"></li>
+      <li><img srcset="img/field-10-800w.webp 800w, img/field-10.webp 1200w" sizes="100vw" src="img/field-10.webp" alt="枝で育つ、まだ青いトマト" loading="lazy" width="1200" height="800"></li>
       <li><img srcset="img/field-7-800w.webp 800w, img/field-7.webp 1200w" sizes="100vw" src="img/field-7.webp" alt="丘を背に、木の台にのせたかぼちゃとトマト" loading="lazy" width="1200" height="800"></li>
       <li><img srcset="img/field-5-800w.webp 800w, img/field-5.webp 1200w" sizes="100vw" src="img/field-5.webp" alt="草の上のトマト" loading="lazy" width="1200" height="800"></li>
-      <li><img srcset="img/story-4-800w.webp 800w, img/story-4.webp 1600w" sizes="100vw" src="img/story-4.webp" alt="枝に一つだけ実った、形のふぞろいなトマト" loading="lazy" width="1600" height="1067"></li>
       <li><img srcset="img/field-9-800w.webp 800w, img/field-9.webp 1200w" sizes="100vw" src="img/field-9.webp" alt="台の上の、ひびの入ったトマト" loading="lazy" width="1200" height="800"></li>
-      <li><img srcset="img/field-10-800w.webp 800w, img/field-10.webp 1200w" sizes="100vw" src="img/field-10.webp" alt="枝で育つ、まだ青いトマト" loading="lazy" width="1200" height="800"></li>
     </ul>
   </div>
   <p class="flow-cap">2026年10月、美瑛の畑で</p>
